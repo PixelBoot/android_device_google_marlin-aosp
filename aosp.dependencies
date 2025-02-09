@@ -1,0 +1,19 @@
+[	
+  {
+     "repository": "LineageOS/android_hardware_sony_timekeep",
+     "target_path": "hardware/sony/timekeep",
+     "branch": "lineage-21",
+     "remote": "github"
+  },
+  {
+    "repository": "android_kernel_google_marlin",
+    "target_path": "kernel/google/marlin",
+    "branch":"unity"
+  },
+  {
+    "repository":"android_vendor_google_marlin",
+    "target_path":"vendor/google/marlin",
+    "branch":"unity",
+    "remote":"pixelbuilds-blobs-gitlab"
+   }
+]

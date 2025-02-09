@@ -21,18 +21,28 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# Inherit some common PixelBuilds stuff.
+$(call inherit-product, vendor/pb/config/common_full_phone.mk)
+
+-include device/google/marlin/device-common.mk
+
+
 PRODUCT_NAME := aosp_sailfish
 PRODUCT_DEVICE := sailfish
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on msm8996
-PRODUCT_MANUFACTURER := Google
-PRODUCT_RESTRICT_VENDOR_FILES := true
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Pixel
+PRODUCT_MANUFACTURER := HTC
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_COPY_FILES += device/google/marlin/fstab.common:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.sailfish
 PRODUCT_COPY_FILES += device/google/marlin/fstab.common:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.sailfish
 
 $(call inherit-product, device/google/marlin/device-sailfish.mk)
+$(call inherit-product, vendor/google/sailfish/sailfish-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/marlin/device-vendor-sailfish.mk)
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_PRODUCT=sunfish
 
 PRODUCT_PACKAGES += \
     Launcher3QuickStep \

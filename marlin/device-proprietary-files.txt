@@ -99,7 +99,6 @@ system/lib64/librcc.so
 system/priv-app/CNEService/CNEService.apk|a4d3c0b54c44ce7334ec9c3b60f1e4a4a57b2307
 
 # Permissions
-product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
 product/etc/permissions/privapp-permissions-google-ps.xml
 
 # RIL
