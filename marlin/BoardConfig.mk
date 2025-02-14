@@ -102,6 +102,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS_ON_USER := true
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/marlin/sepolicy/vendor
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/marlin/sepolicy/vendor/verizon
